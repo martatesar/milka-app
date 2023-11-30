@@ -22,8 +22,8 @@ const HomePage = () => {
           alignItems: "center",
         }}
       >
-        <a href="/#/ar">AR</a>
-        <a href="/#/360">360</a>
+        <a href="#/ar">AR</a>
+        <a href="#/360">360</a>
       </div>
     </div>
   );
