@@ -6,4 +6,7 @@ import mkcert from 'vite-plugin-mkcert';
 export default defineConfig({
   plugins: [react(), mkcert()],
   base: '/milka-app/',
+  server: {
+    host: true
+  }
 })
