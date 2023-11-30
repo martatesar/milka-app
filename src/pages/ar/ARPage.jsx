@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import ARScene from "../../components/ar/ARScene";
-import useSequentialScriptLoader from "../../hooks/useDynamicScript";
+import useScripts from "../../hooks/useScripts";
 
 const ARPage = () => {
-  const allScriptsLoaded = useSequentialScriptLoader([
+  const allScriptsLoaded = useScripts([
     { src: "//cdn.8thwall.com/web/aframe/8frame-1.3.0.min.js" },
     { src: "//cdn.8thwall.com/web/xrextras/xrextras.js" },
     { src: "//cdn.8thwall.com/web/landing-page/landing-page.js" },
-    { src: "//apps.8thwall.com/xrweb?appKey=XXXXXXXXX", async: true },
+    { src: "//apps.8thwall.com/xrweb?appKey=XXXX", async: true},
   ]);
 
   useEffect(() => {

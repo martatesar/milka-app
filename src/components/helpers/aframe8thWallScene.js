@@ -68,29 +68,6 @@ function AFrameScene({sceneHtml, imageTargets, components, systems, primitives})
       ascene.parentNode.removeChild(ascene)
       html.className = origHtmlClass
 
-      // Unregister components
-      if (components) {
-        components.forEach(({name}) => {
-          registeredComponents.delete(name)
-          window.AFRAME.unregisterComponent(name)
-        })
-      }
-      // Unregister systems
-      if (systems) {
-        systems.forEach(({name}) => {
-          registeredSystems.delete(name)
-          window.AFRAME.unregisterSystem(name)
-        })
-      }
-      // Unregister primitives
-      if (primitives) {
-        primitives.forEach(({name}) => {
-          registeredPrimitives.delete(name)
-          window.AFRAME.unregisterPrimitive(name)
-        })
-      }
-
-      delete window.AFRAME;
     }
   // eslint-disable-next-line
   }, [])
